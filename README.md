@@ -1,3 +1,68 @@
+Netlify + Fauna DB
+Using FaunaDB & Netlify functions
+
+https://github.com/netlify/netlify-faunadb-example
+
+https://dashboard.fauna.com/
+  https://dashboard.fauna.com/db/us/Netlify
+
+https://dashboard.fauna.com/keys/@db/us/Netlify
+    export FAUNADB_SERVER_SECRET=fnAEcemUZyAAQIFOrKmhE9b52QIGOz0Xqfn50OE1
+
+# .nvmrc # v16.13.1
+
+
+ntl init # fauna-netlify
+    Site Created
+    Admin URL: https://app.netlify.com/sites/fauna-netlify
+    URL:       https://fauna-netlify.netlify.app
+    Site ID:   add11563-60ec-45c4-90ec-f9a82ea80c68
+    ? Your build command (hugo build/yarn run build/etc): npm run build
+    ? Directory to deploy (blank for current dir): build
+    ? Netlify functions folder: functions
+    Adding deploy key to repository...
+
+    ›   Error: Failed adding GitHub deploy key with error: Not Found. Does the repository netlify-faunadb-example exist and do netlify has the correct permissions to set up deploy keys?
+
+npm run bootstrap
+
+ntl dev
+  localhost:8888
+      FaunaDB key is not unauthorized. Make sure you set it in terminal session where you ran `npm start`. Visit http://bit.ly/set-fauna-key for more info
+
+https://docs.fauna.com/fauna/current/learn/quick_start/
+
+
+
+
+
+
+
+
+npm run bootstrap
+    > netlify-fauna@0.1.0 bootstrap
+    > netlify dev:exec node ./scripts/bootstrap-fauna-database.js
+
+    ◈ No Site ID detected. You probably forgot to run `netlify link` or `netlify init`.
+    Creating your FaunaDB Database...
+
+    Create the fauna database schema!
+    Fauna Database schema has been created
+    Claim your fauna database with "netlify addons:auth fauna"
+
+# netlify addons:auth fauna    # fails
+
+open localhost:3000 && npm start
+
+
+
+
+
+
+
+
+
+_________________________________________________________________________________
 # Netlify + FaunaDB &nbsp;&nbsp;&nbsp;<a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-faunadb-example&stack=fauna"><img src="https://www.netlify.com/img/deploy/button.svg"></a>
 
 Example of using [FaunaDB](https://fauna.com/) with [Netlify functions](https://www.netlify.com/docs/functions/)
@@ -84,7 +149,7 @@ Click the [Deploy to Netlify Button](https://app.netlify.com/start/deploy?reposi
 
     In your terminal, run the following command:
 
-    ```bash 
+    ```bash
     export FAUNADB_SERVER_SECRET=YourFaunaDBSecretHere
     ```
 

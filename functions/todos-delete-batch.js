@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
   /* configure faunaDB Client with our secret */
   const client = new faunadb.Client({
     secret: process.env.FAUNADB_SERVER_SECRET
-  }) 
+  })
   const data = JSON.parse(event.body)
   console.log('data', data)
   console.log('Function `todo-delete-batch` invoked', data.ids)

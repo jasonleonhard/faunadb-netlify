@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   /* configure faunaDB Client with our secret */
   const client = new faunadb.Client({
     secret: process.env.FAUNADB_SERVER_SECRET
-  })  
+  })
   /* parse the string body into a useable JS object */
   const data = JSON.parse(event.body)
   console.log('Function `todo-create` invoked', data)
