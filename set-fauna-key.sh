@@ -1,0 +1,4 @@
+# on mac
+export FAUNADB_SECRET=fnAEcemUZyAAQIFOrKmhE9b52QIGOz0Xqfn50OE1
+# # on windows
+# set FAUNADB_SECRET=fnAEcemUZyAAQIFOrKmhE9b52QIGOz0Xqfn50OE1
